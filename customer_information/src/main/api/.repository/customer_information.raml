@@ -1,0 +1,28 @@
+#%RAML 1.0
+version: v1
+title: Customer_Information
+baseUri: https://mocksvc.mulesoft.com/mocks/e5cb2ec9-78fc-4c4e-b2ae-e031d5beb040 # baseUri: http://localhost:8081
+
+/customerInformation:
+  get:
+    description: Get Customer Information for Insurance Company
+    queryParameters: 
+      customerID:
+        type: integer
+        required: true
+        example: 111111
+       
+    responses: 
+      "200": 
+        body: 
+          application/json: 
+            example: |
+              
+                {
+                  "name": "Andrew Davey",
+                  "addressLine1": "Coach House",
+                  "addressLine2": "Colton Road",
+                  "city": "Leeds",
+                  "postCode": "LS15 0AB"
+                }
+              
